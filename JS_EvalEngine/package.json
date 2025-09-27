@@ -1,0 +1,32 @@
+{
+  "name": "eval-engine",
+  "version": "0.0.1",
+  "description": "A JavaScript evaluation engine",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "bun build src/index.ts --outdir dist --target node --minify && tsc --emitDeclarationOnly --outDir dist",
+    "prepublishOnly": "bun run build",
+    "test": "bun test"
+  },
+  "author": "PirateShip Pte. Ltd.",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/node": "^24.5.2"
+  },
+  "peerDependencies": {
+    "typescript": "^5.9.2"
+  }
+}
