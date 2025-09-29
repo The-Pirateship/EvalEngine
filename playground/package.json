@@ -10,6 +10,9 @@
     "typescript": "^5"
   },
   "dependencies": {
-    "eval-engine": "file:../JS_EvalEngine"
+    "eval-engine": "file:../JS_EvalEngine",
+    "@ai-sdk/openai": "^0.0.36",
+    "ai": "^4.0.25",
+    "zod": "^3.22.4"
   }
 }
